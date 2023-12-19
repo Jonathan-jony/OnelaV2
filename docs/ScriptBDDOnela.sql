@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `Onela`.`Contact` (
   `firstname` VARCHAR(60) NOT NULL,
   `lastname` VARCHAR(60) NOT NULL,
   `phone_number` VARCHAR(30) NOT NULL,
+  `active` INT NOT NULL,
   PRIMARY KEY (`idContact`),
   UNIQUE INDEX `UniqueName` (`firstname` ASC, `lastname` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -36,6 +37,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `Onela`.`Group` (
   `idGroup` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(25) NOT NULL,
+  `active` INT NOT NULL,
   PRIMARY KEY (`idGroup`))
 ENGINE = InnoDB;
 
