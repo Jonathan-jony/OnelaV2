@@ -37,7 +37,8 @@
             this.label_separateLine = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_NoContact = new System.Windows.Forms.Label();
+            this.label_barre_recherche = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_user)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +56,12 @@
             // 
             this.TextBox_search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TextBox_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_search.Location = new System.Drawing.Point(16, 36);
+            this.TextBox_search.Location = new System.Drawing.Point(16, 55);
             this.TextBox_search.Name = "TextBox_search";
             this.TextBox_search.Size = new System.Drawing.Size(271, 28);
             this.TextBox_search.TabIndex = 2;
-            this.TextBox_search.Text = "🔍 Recherche";
+            this.TextBox_search.Text = "";
+            this.TextBox_search.TextChanged += new System.EventHandler(this.TextBox_search_TextChanged);
             // 
             // button_addContacts
             // 
@@ -117,22 +119,33 @@
             this.listBox1.Size = new System.Drawing.Size(239, 264);
             this.listBox1.TabIndex = 12;
             // 
-            // label1
+            // label_NoContact
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 181);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 25);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Aucun contact";
+            this.label_NoContact.AutoSize = true;
+            this.label_NoContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NoContact.Location = new System.Drawing.Point(69, 181);
+            this.label_NoContact.Name = "label_NoContact";
+            this.label_NoContact.Size = new System.Drawing.Size(137, 25);
+            this.label_NoContact.TabIndex = 13;
+            this.label_NoContact.Text = "Aucun contact";
+            // 
+            // label_barre_recherche
+            // 
+            this.label_barre_recherche.AutoSize = true;
+            this.label_barre_recherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_barre_recherche.Location = new System.Drawing.Point(16, 37);
+            this.label_barre_recherche.Name = "label_barre_recherche";
+            this.label_barre_recherche.Size = new System.Drawing.Size(112, 15);
+            this.label_barre_recherche.TabIndex = 14;
+            this.label_barre_recherche.Text = "Barre de recherche";
             // 
             // Frm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 560);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_barre_recherche);
+            this.Controls.Add(this.label_NoContact);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label_separateLine);
             this.Controls.Add(this.button_userIMG);
@@ -159,7 +172,8 @@
         private System.Windows.Forms.Label label_separateLine;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_NoContact;
+        private System.Windows.Forms.Label label_barre_recherche;
     }
 }
 

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Onela
 {
@@ -36,17 +37,37 @@ namespace Onela
 
             if (connector.ExecuteQuerySelect() == null)
             {
-                label1.Visible = true;
+                label_NoContact.Visible = true;
                 listBox1.Visible = false;
             }
             else
             {
-                label1.Visible = false;
+                label_NoContact.Visible = false;
                 listBox1.Visible = true;
                 foreach (Contact contact in connector.ExecuteQuerySelect())
                 {
                     listBox1.Items.Add(contact.Firstname + " " + contact.Lastname + " " + contact.Numberphone);
                 }                
+            }
+        }
+
+        private void TextBox_search_TextChanged(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+
+            string search = TextBox_search.Text;
+
+            foreach (Contact contact in connector.ExecuteQuerySelectFilter(search))
+            {
+                listBox1.Items.Add(contact.Firstname + " " + contact.Lastname + " " + contact.Numberphone);
+            }
+            if (listBox1.Items.Count == 0)
+            {
+                label_NoContact.Visible = true;
+            }
+            else 
+            { 
+                label_NoContact.Visible = false; 
             }
         }
     }
