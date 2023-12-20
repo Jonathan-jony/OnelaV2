@@ -35,10 +35,10 @@
             this.label_user = new System.Windows.Forms.Label();
             this.button_userIMG = new System.Windows.Forms.Button();
             this.label_separateLine = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.label_NoContact = new System.Windows.Forms.Label();
             this.label_barre_recherche = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_user)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.TextBox_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_search.Location = new System.Drawing.Point(16, 55);
             this.TextBox_search.Name = "TextBox_search";
-            this.TextBox_search.Size = new System.Drawing.Size(271, 28);
+            this.TextBox_search.Size = new System.Drawing.Size(307, 28);
             this.TextBox_search.TabIndex = 2;
             this.TextBox_search.Text = "";
             this.TextBox_search.TextChanged += new System.EventHandler(this.TextBox_search_TextChanged);
@@ -66,7 +66,7 @@
             // button_addContacts
             // 
             this.button_addContacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_addContacts.Location = new System.Drawing.Point(264, 6);
+            this.button_addContacts.Location = new System.Drawing.Point(300, 9);
             this.button_addContacts.Name = "button_addContacts";
             this.button_addContacts.Size = new System.Drawing.Size(23, 24);
             this.button_addContacts.TabIndex = 3;
@@ -107,23 +107,15 @@
             this.label_separateLine.AutoSize = true;
             this.label_separateLine.Location = new System.Drawing.Point(1, 152);
             this.label_separateLine.Name = "label_separateLine";
-            this.label_separateLine.Size = new System.Drawing.Size(295, 13);
+            this.label_separateLine.Size = new System.Drawing.Size(322, 13);
             this.label_separateLine.TabIndex = 7;
-            this.label_separateLine.Text = "________________________________________________";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(19, 234);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(239, 264);
-            this.listBox1.TabIndex = 12;
+            this.label_separateLine.Text = " ____________________________________________________";
             // 
             // label_NoContact
             // 
             this.label_NoContact.AutoSize = true;
             this.label_NoContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NoContact.Location = new System.Drawing.Point(69, 181);
+            this.label_NoContact.Location = new System.Drawing.Point(109, 181);
             this.label_NoContact.Name = "label_NoContact";
             this.label_NoContact.Size = new System.Drawing.Size(137, 25);
             this.label_NoContact.TabIndex = 13;
@@ -139,14 +131,22 @@
             this.label_barre_recherche.TabIndex = 14;
             this.label_barre_recherche.Text = "Barre de recherche";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 209);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(319, 320);
+            this.flowLayoutPanel1.TabIndex = 15;
+            // 
             // Frm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 560);
+            this.ClientSize = new System.Drawing.Size(335, 560);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label_barre_recherche);
             this.Controls.Add(this.label_NoContact);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label_separateLine);
             this.Controls.Add(this.button_userIMG);
             this.Controls.Add(this.label_user);
@@ -170,10 +170,10 @@
         private System.Windows.Forms.Label label_user;
         private System.Windows.Forms.Button button_userIMG;
         private System.Windows.Forms.Label label_separateLine;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Label label_NoContact;
         private System.Windows.Forms.Label label_barre_recherche;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
