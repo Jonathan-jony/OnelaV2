@@ -12,6 +12,8 @@ namespace Onela
 {
     public partial class ContactDesign : UserControl
     {
+        private DBConnector connector;
+        private Contact contact = null;
         private string _contactFirstName;
         private string _contactLastName;
         private string _contactNumberPhone;
@@ -20,6 +22,8 @@ namespace Onela
         public ContactDesign()
         {
             InitializeComponent();
+
+            connector = new DBConnector();
         }
 
         public string ContactFirstName
@@ -65,6 +69,15 @@ namespace Onela
                 return _contactImage;
             }
             set { _contactImage = value; }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm1 frm = new Frm1();
+            frm.Hide();
+            Contact contact = connector.ExecuteQuerySelectOneContact(_contactNumberPhone);
+            modifyContactForm modifyContactForm = new modifyContactForm(contact);
+            modifyContactForm.Show();
         }
     }
 }

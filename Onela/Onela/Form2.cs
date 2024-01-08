@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Onela
 {
-    public partial class Frm2 : Form
+    public partial class createContactForm : Form
     {
         public ListContacts listContacts = new ListContacts();
         public Contact _contact;
@@ -20,7 +20,7 @@ namespace Onela
         public static string _lastName = "";
         public static string _numberPhone = "";
 
-        public Frm2()
+        public createContactForm()
         {
             InitializeComponent();
             connector = new DBConnector();
