@@ -13,16 +13,21 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Onela
 {
-    public partial class Frm1 : Form
+    public partial class RepertoireForm : Form
     {
         private ListContacts listContacts;
         private DBConnector connector;
         ContactDesign contactDesigns;
-        public Frm1()
+        public RepertoireForm()
         {
             InitializeComponent();
             connector = new DBConnector();
             UpdateListBox(listContacts);
+        }
+
+        private void CloseRepertoireForm(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void button_addContacts_Click(object sender, EventArgs e)
@@ -31,6 +36,7 @@ namespace Onela
             createContactForm frm2 = new createContactForm();
             frm2.Show();
         }
+        
 
         public void UpdateListBox(ListContacts listContacts)
         {
@@ -49,11 +55,19 @@ namespace Onela
                     contactDesigns.ContactFirstName = contact.Firstname;
                     contactDesigns.ContactLastName = contact.Lastname;
                     contactDesigns.ContactNumberPhone = contact.Numberphone;
+                    contactDesigns.ContactActive = contact.Active;
+                    
+
+                    if (contactDesigns.ContactActive == "0")
+                    {
+                        contactDesigns.BackColor = Color.Red;
+                    }
 
                     //if (flowLayoutPanel1.Controls.Count > 0)
                     //{
                     //    flowLayoutPanel1.Controls.Clear();
                     //}
+                    contactDesigns.ModifyButtonClick += CloseRepertoireForm;
                     flowLayoutPanel1.Controls.Add(contactDesigns);
                 }                
             }
@@ -71,6 +85,12 @@ namespace Onela
                 contactDesigns.ContactFirstName = contact.Firstname;
                 contactDesigns.ContactLastName = contact.Lastname;
                 contactDesigns.ContactNumberPhone = contact.Numberphone;
+                contactDesigns.ContactActive = contact.Active;
+
+                if (contactDesigns.ContactActive == "0")
+                {
+                    contactDesigns.BackColor = Color.Red;
+                }
 
                 flowLayoutPanel1.Controls.Add(contactDesigns);
             }

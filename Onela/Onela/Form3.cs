@@ -36,6 +36,13 @@ namespace Onela
             textBox_lastnameModifyContact.Text = _contact.Lastname;
             textBox_numberModifyContact.Text = _contact.Numberphone;
             _oldNumberPhone = _contact.Numberphone;
+
+            chk_Block.Checked = true;
+
+            if (_contact.Active == "1")
+            {
+                chk_Block.Checked = false;
+            }            
         }
 
         private void button_modifyContacts_Click(object sender, EventArgs e)
@@ -49,12 +56,12 @@ namespace Onela
                 _blocked = true;
             }
 
-            _contact = new Contact(_contact.Firstname, _contact.Lastname, _contact.Numberphone);
+            _contact = new Contact(_contact.Firstname, _contact.Lastname, _contact.Numberphone, _contact.Active);
 
             connector.ExecuteQueryUpdate(_contact, _oldNumberPhone, _blocked);
 
             this.Close();
-            Frm1 frm1 = new Frm1();
+            RepertoireForm frm1 = new RepertoireForm();
             frm1.Show();
         }
     }

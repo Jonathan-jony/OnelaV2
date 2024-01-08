@@ -26,7 +26,8 @@ namespace Onela
                 Contact contact = new Contact(
                     Firstname: reader.GetString(1),
                     Lastname: reader.GetString(2),
-                    numberPhone: reader.GetString(3)
+                    numberPhone: reader.GetString(3),
+                    active: reader.GetString(4)
                     );
 
                 queryResults.Add(contact);
@@ -53,7 +54,8 @@ namespace Onela
                  contact = new Contact(
                     Firstname: reader.GetString(1),
                     Lastname: reader.GetString(2),
-                    numberPhone: reader.GetString(3)
+                    numberPhone: reader.GetString(3),
+                    active: reader.GetString(4)
                     );
             }
             return contact;
@@ -79,7 +81,8 @@ namespace Onela
                 Contact contact = new Contact(
                     Firstname: reader.GetString(1),
                     Lastname: reader.GetString(2),
-                    numberPhone: reader.GetString(3)
+                    numberPhone: reader.GetString(3),
+                    active: reader.GetString(4)
                     );
 
                 queryResults.Add(contact);

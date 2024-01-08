@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Onela.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,16 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Onela
 {
     public partial class ContactDesign : UserControl
     {
+
+        public event EventHandler ModifyButtonClick;
+
         private DBConnector connector;
         private Contact contact = null;
         private string _contactFirstName;
         private string _contactLastName;
         private string _contactNumberPhone;
+        private string _contactActive;
         private Image _contactImage;
 
         public ContactDesign()
@@ -24,6 +30,8 @@ namespace Onela
             InitializeComponent();
 
             connector = new DBConnector();
+
+            pictureBox1.Image = Resources.izlUGPTOOCbs6O2AT1o0P_1020;
         }
 
         public string ContactFirstName
@@ -68,16 +76,40 @@ namespace Onela
             {
                 return _contactImage;
             }
-            set { _contactImage = value; }
+            set 
+            { 
+                _contactImage = value; 
+            }
+        }
+        public string ContactActive
+        {
+            get
+            {
+                return _contactActive;
+            }
+            set 
+            { 
+                _contactActive = value;
+                if (_contactActive == "0")
+                {
+                    
+                    pictureBox1.Image = Resources.Yqs6W1yBvDNfdDmmNRO4B_1020;
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Frm1 frm = new Frm1();
-            frm.Hide();
+
+            OnModifyButtonClick(EventArgs.Empty);
+
             Contact contact = connector.ExecuteQuerySelectOneContact(_contactNumberPhone);
             modifyContactForm modifyContactForm = new modifyContactForm(contact);
             modifyContactForm.Show();
+        }
+        protected virtual void OnModifyButtonClick(EventArgs e)
+        {
+            ModifyButtonClick?.Invoke(this, e);
         }
     }
 }

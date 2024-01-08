@@ -168,6 +168,10 @@
   <ItemGroup>
     <None Include="Resources\izlUGPTOOCbs6O2AT1o0P.1020.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Yqs6W1yBvDNfdDmmNRO4B.1020.jpg" />
+    <None Include="Resources\Yqs6W1yBvDNfdDmmNRO4B.10201.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
