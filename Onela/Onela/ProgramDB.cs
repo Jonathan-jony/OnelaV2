@@ -9,7 +9,7 @@ namespace Onela
         {
             List<Contact> queryResults = new List<Contact>();
 
-            string connString = "server=localhost;user=root;database=onela;port=3306;password=Pa$$w0rd;";
+            string connString = "server=localhost;user=User;database=onela;port=3306;password=Pa$$w0rd;";
 
             MySqlConnection connection = new MySqlConnection(connString);
             connection.Open();
@@ -39,7 +39,7 @@ namespace Onela
         {
             Contact contact = null;
 
-            string connString = "server=localhost;user=root;database=onela;port=3306;password=Pa$$w0rd;";
+            string connString = "server=localhost;user=User;database=onela;port=3306;password=Pa$$w0rd;";
 
             MySqlConnection connection = new MySqlConnection(connString);
             connection.Open();
@@ -66,7 +66,7 @@ namespace Onela
         {
             List<Contact> queryResults = new List<Contact>();
 
-            string connString = "server=localhost;user=root;database=onela;port=3306;password=Pa$$w0rd;";
+            string connString = "server=localhost;user=User;database=onela;port=3306;password=Pa$$w0rd;";
 
             MySqlConnection connection = new MySqlConnection(connString);
             connection.Open();
@@ -94,7 +94,7 @@ namespace Onela
         }
         public bool ExecuteQueryInsert(Contact contact)
         {
-            string connString = "server=localhost;user=root;database=onela;port=3306;password=Pa$$w0rd;";
+            string connString = "server=localhost;user=User;database=onela;port=3306;password=Pa$$w0rd;";
 
             MySqlConnection connection = new MySqlConnection(connString);
             connection.Open();
@@ -107,7 +107,7 @@ namespace Onela
         }
         public bool ExecuteQueryUpdate(Contact contact, string oldnumber, bool blocked)
         {
-            string connString = "server=localhost;user=root;database=onela;port=3306;password=Pa$$w0rd;";
+            string connString = "server=localhost;user=User;database=onela;port=3306;password=Pa$$w0rd;";
 
             MySqlConnection connection = new MySqlConnection(connString);
             connection.Open();
