@@ -105,9 +105,10 @@
             // 
             // pictureBox_newContacts
             // 
-            this.pictureBox_newContacts.Location = new System.Drawing.Point(55, 69);
+            this.pictureBox_newContacts.Location = new System.Drawing.Point(14, 47);
             this.pictureBox_newContacts.Name = "pictureBox_newContacts";
-            this.pictureBox_newContacts.Size = new System.Drawing.Size(117, 100);
+            this.pictureBox_newContacts.Size = new System.Drawing.Size(172, 148);
+            this.pictureBox_newContacts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_newContacts.TabIndex = 16;
             this.pictureBox_newContacts.TabStop = false;
             // 

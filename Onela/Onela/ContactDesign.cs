@@ -93,13 +93,14 @@ namespace Onela
                 if (_contactActive == "0")
                 {
 
-                    pictureBox1.Image = Resources.photo.jpg;
+                    pictureBox1.Image = Resources.photo;
+
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {        
+        {
             Contact contact = connector.ExecuteQuerySelectOneContact(_contactNumberPhone);
             modifyContactForm modifyContactForm = new modifyContactForm(contact);
             modifyContactForm.Show();

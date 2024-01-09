@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Onela.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,12 +37,14 @@ namespace Onela
             textBox_lastnameModifyContact.Text = _contact.Lastname;
             textBox_numberModifyContact.Text = _contact.Numberphone;
             _oldNumberPhone = _contact.Numberphone;
+            pictureBox_newContacts.Image = Resources.izlUGPTOOCbs6O2AT1o0P_1020;
 
-            chk_Block.Checked = true;
+            chk_Block.Checked = false;
 
-            if (_contact.Active == "1")
+            if (_contact.Active == "0")
             {
-                chk_Block.Checked = false;
+                chk_Block.Checked = true;
+                pictureBox_newContacts.Image = Resources.photo;
             }            
         }
 
