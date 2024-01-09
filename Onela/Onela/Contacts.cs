@@ -10,11 +10,13 @@ namespace Onela
         public string _firstname;
         public string _lastname;
         public string _numberphone;
-        public Contact(string Firstname, string Lastname, string numberPhone)
+        public string _active = null;
+        public Contact(string Firstname, string Lastname, string numberPhone, string active)
         {
             _firstname = Firstname;
             _lastname = Lastname;
             _numberphone = numberPhone;
+            _active = active;
         }
         public string Firstname
         {
@@ -47,6 +49,17 @@ namespace Onela
             set
             {
                 _numberphone = value;
+            }
+        }
+        public string Active
+        {
+            get
+            {
+                return _active;
+            }
+            set
+            {
+                _active = value;
             }
         }
     }

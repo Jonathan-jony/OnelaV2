@@ -1,6 +1,6 @@
 ﻿namespace Onela
 {
-    partial class Frm1
+    partial class RepertoireForm
     {
         /// <summary>
         /// Required designer variable.
@@ -139,7 +139,7 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(319, 320);
             this.flowLayoutPanel1.TabIndex = 15;
             // 
-            // Frm1
+            // RepertoireForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,8 +154,8 @@
             this.Controls.Add(this.button_addContacts);
             this.Controls.Add(this.TextBox_search);
             this.Controls.Add(this.label_contacts);
-            this.Name = "Frm1";
-            this.Text = "Form1";
+            this.Name = "RepertoireForm";
+            this.Text = "Repertoire";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_user)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

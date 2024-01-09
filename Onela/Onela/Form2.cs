@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace Onela
 {
-    public partial class Frm2 : Form
+    public partial class createContactForm : Form
     {
         public ListContacts listContacts = new ListContacts();
         public Contact _contact;
-        public Frm1 GetFrm1;
+        public RepertoireForm GetFrm1;
         private DBConnector connector;
         public static string _firstName = "";
         public static string _lastName = "";
         public static string _numberPhone = "";
+        public static string _active;
 
-        public Frm2()
+        public createContactForm()
         {
             InitializeComponent();
             connector = new DBConnector();
@@ -30,8 +31,9 @@ namespace Onela
             _firstName = textBox_firstnameNewContacts.Text;
             _lastName = textBox_lastnameNewContacts.Text;
             _numberPhone = textBox_numberNewContacts.Text;
+            _active = "1";
 
-            _contact = new Contact(_firstName, _lastName, _numberPhone);
+            _contact = new Contact(_firstName, _lastName, _numberPhone, _active);
 
             connector.ExecuteQueryInsert(_contact);
 
@@ -39,7 +41,7 @@ namespace Onela
 
             this.Close();
 
-            Frm1 frm1 = new Frm1();
+            RepertoireForm frm1 = new RepertoireForm();
             frm1.Show();
         }
     }
