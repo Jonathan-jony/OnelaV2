@@ -74,5 +74,19 @@ namespace Onela
             cmd.ExecuteNonQuery();
             return true;
         }
+
+        public bool UpdateQuery(Contact contact)
+        {
+            string connString = "server=localhost;user=root;database=onela;port=3306;password=Pa$$w0rd;";
+
+            MySqlConnection connection = new MySqlConnection(connString);
+            connection.Open();
+
+            string query = "INSERT INTO contact (firstname, lastname, phone_number) VALUES ('" + contact.Firstname + "', '" + contact.Lastname + "', '" + contact.Numberphone + "');";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
+            return true;
+        }
     }
 }

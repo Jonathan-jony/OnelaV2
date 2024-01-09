@@ -66,5 +66,10 @@ namespace Onela
             }
             set { _contactImage = value; }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
