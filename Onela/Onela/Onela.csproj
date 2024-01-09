@@ -169,6 +169,8 @@
     <None Include="Resources\izlUGPTOOCbs6O2AT1o0P.1020.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\PhotoStylé" />
+    <Content Include="Resources\photo.jpg" />
     <Content Include="Resources\Yqs6W1yBvDNfdDmmNRO4B.1020.jpg" />
     <None Include="Resources\Yqs6W1yBvDNfdDmmNRO4B.10201.jpg" />
   </ItemGroup>

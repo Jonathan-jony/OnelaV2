@@ -28,7 +28,7 @@ namespace Onela
         public ContactDesign()
         {
             InitializeComponent();
-
+            OnModifyButtonClick(EventArgs.Empty);
             connector = new DBConnector();
 
             pictureBox1.Image = Resources.izlUGPTOOCbs6O2AT1o0P_1020;
@@ -92,17 +92,14 @@ namespace Onela
                 _contactActive = value;
                 if (_contactActive == "0")
                 {
-                    
-                    pictureBox1.Image = Resources.Yqs6W1yBvDNfdDmmNRO4B_1020;
+
+                    pictureBox1.Image = Resources.photo.jpg;
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-
-            OnModifyButtonClick(EventArgs.Empty);
-
+        {        
             Contact contact = connector.ExecuteQuerySelectOneContact(_contactNumberPhone);
             modifyContactForm modifyContactForm = new modifyContactForm(contact);
             modifyContactForm.Show();
