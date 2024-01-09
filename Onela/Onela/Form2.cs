@@ -20,12 +20,14 @@ namespace Onela
         public static string _lastName = "";
         public static string _numberPhone = "";
         public static string _active;
+        public static string _image;
 
         public createContactForm()
         {
             InitializeComponent();
             connector = new DBConnector();
         }
+
         private void button_createContacts_Click(object sender, EventArgs e)
         {
             _firstName = textBox_firstnameNewContacts.Text;
@@ -33,7 +35,7 @@ namespace Onela
             _numberPhone = textBox_numberNewContacts.Text;
             _active = "1";
 
-            _contact = new Contact(_firstName, _lastName, _numberPhone, _active);
+            _contact = new Contact(_firstName, _lastName, _numberPhone, _active, _image);
 
             connector.ExecuteQueryInsert(_contact);
 

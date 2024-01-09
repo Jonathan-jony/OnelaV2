@@ -83,6 +83,26 @@ namespace Onela.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap wuygGPWbwuf2MYqpGjiVE_1020 {
+            get {
+                object obj = ResourceManager.GetObject("wuygGPWbwuf2MYqpGjiVE.1020", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap XeGjq6Wp3oYyZKn54dO9r_1020 {
+            get {
+                object obj = ResourceManager.GetObject("XeGjq6Wp3oYyZKn54dO9r.1020", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Yqs6W1yBvDNfdDmmNRO4B_1020 {
             get {
                 object obj = ResourceManager.GetObject("Yqs6W1yBvDNfdDmmNRO4B.1020", resourceCulture);

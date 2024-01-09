@@ -93,18 +93,12 @@ namespace Onela
                 if (_contactActive == "0")
                 {
 
-                    pictureBox1.Image = Resources.photo;
+                    pictureBox1.Image = Resources.XeGjq6Wp3oYyZKn54dO9r_1020;
 
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Contact contact = connector.ExecuteQuerySelectOneContact(_contactNumberPhone);
-            modifyContactForm modifyContactForm = new modifyContactForm(contact);
-            modifyContactForm.Show();
-        }
         protected virtual void OnModifyButtonClick(EventArgs e)
         {
             ModifyButtonClick?.Invoke(this, e);
@@ -112,7 +106,9 @@ namespace Onela
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Contact contact = connector.ExecuteQuerySelectOneContact(_contactNumberPhone);
+            modifyContactForm modifyContactForm = new modifyContactForm(contact);
+            modifyContactForm.Show();
         }
     }
 }

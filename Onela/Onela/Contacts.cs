@@ -11,12 +11,14 @@ namespace Onela
         public string _lastname;
         public string _numberphone;
         public string _active = null;
-        public Contact(string Firstname, string Lastname, string numberPhone, string active)
+        public string _image = null;
+        public Contact(string Firstname, string Lastname, string numberPhone, string active, string image)
         {
             _firstname = Firstname;
             _lastname = Lastname;
             _numberphone = numberPhone;
             _active = active;
+            _image = image;
         }
         public string Firstname
         {
@@ -61,6 +63,14 @@ namespace Onela
             {
                 _active = value;
             }
+        }
+        public string Image
+        {
+            get
+            {
+                return _image;
+            }
+            set { _image = value; }
         }
     }
 }

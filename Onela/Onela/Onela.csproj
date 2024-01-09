@@ -171,6 +171,8 @@
   <ItemGroup>
     <None Include="Resources\PhotoStylé" />
     <Content Include="Resources\photo.jpg" />
+    <None Include="Resources\XeGjq6Wp3oYyZKn54dO9r.1020.jpg" />
+    <None Include="Resources\wuygGPWbwuf2MYqpGjiVE.1020.jpg" />
     <Content Include="Resources\Yqs6W1yBvDNfdDmmNRO4B.1020.jpg" />
     <None Include="Resources\Yqs6W1yBvDNfdDmmNRO4B.10201.jpg" />
   </ItemGroup>

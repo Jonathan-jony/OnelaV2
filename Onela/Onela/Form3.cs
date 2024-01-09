@@ -44,7 +44,7 @@ namespace Onela
             if (_contact.Active == "0")
             {
                 chk_Block.Checked = true;
-                pictureBox_newContacts.Image = Resources.photo;
+                pictureBox_newContacts.Image = Resources.XeGjq6Wp3oYyZKn54dO9r_1020;
             }            
         }
 
@@ -59,7 +59,7 @@ namespace Onela
                 _blocked = true;
             }
 
-            _contact = new Contact(_contact.Firstname, _contact.Lastname, _contact.Numberphone, _contact.Active);
+            _contact = new Contact(_contact.Firstname, _contact.Lastname, _contact.Numberphone, _contact.Active, _contact.Image);
 
             connector.ExecuteQueryUpdate(_contact, _oldNumberPhone, _blocked);
 

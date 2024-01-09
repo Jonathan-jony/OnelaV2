@@ -140,6 +140,7 @@
             this.button_createContacts.Text = "Créer";
             this.button_createContacts.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button_createContacts.UseVisualStyleBackColor = true;
+            this.button_createContacts.Click += new System.EventHandler(this.button_createContacts_Click);
             // 
             // button_cancelAddContacts
             // 

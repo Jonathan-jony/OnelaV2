@@ -27,7 +27,8 @@ namespace Onela
                     Firstname: reader.GetString(1),
                     Lastname: reader.GetString(2),
                     numberPhone: reader.GetString(3),
-                    active: reader.GetString(4)
+                    active: reader.GetString(4),
+                    image: reader.GetString(5)
                     );
 
                 queryResults.Add(contact);
@@ -55,7 +56,8 @@ namespace Onela
                     Firstname: reader.GetString(1),
                     Lastname: reader.GetString(2),
                     numberPhone: reader.GetString(3),
-                    active: reader.GetString(4)
+                    active: reader.GetString(4),
+                    image: reader.GetString(5)
                     );
             }
             return contact;
@@ -82,7 +84,8 @@ namespace Onela
                     Firstname: reader.GetString(1),
                     Lastname: reader.GetString(2),
                     numberPhone: reader.GetString(3),
-                    active: reader.GetString(4)
+                    active: reader.GetString(4),
+                    image: reader.GetString(5)
                     );
 
                 queryResults.Add(contact);
@@ -96,28 +99,18 @@ namespace Onela
             MySqlConnection connection = new MySqlConnection(connString);
             connection.Open();
 
-            string query = "INSERT INTO contact (firstname, lastname, phone_number) VALUES ('" + contact.Firstname + "', '" + contact.Lastname + "', '" + contact.Numberphone + "');";
+            string query = "INSERT INTO contact (firstname, lastname, phone_number, active, image) VALUES ('" + contact.Firstname + "', '" + contact.Lastname + "', '" + contact.Numberphone + "', '1', '" + contact.Image +"');";
 
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             return true;
         }
-
-<<<<<<< HEAD
-        public bool UpdateQuery(Contact contact)
-=======
         public bool ExecuteQueryUpdate(Contact contact, string oldnumber, bool blocked)
->>>>>>> 701bbbfa1d10264350bbddd10d53ed7b7fde1c34
         {
             string connString = "server=localhost;user=root;database=onela;port=3306;password=Pa$$w0rd;";
 
             MySqlConnection connection = new MySqlConnection(connString);
             connection.Open();
-
-<<<<<<< HEAD
-            string query = "INSERT INTO contact (firstname, lastname, phone_number) VALUES ('" + contact.Firstname + "', '" + contact.Lastname + "', '" + contact.Numberphone + "');";
-
-=======
             string query;
 
             if (blocked)
@@ -128,7 +121,6 @@ namespace Onela
             {
                 query = "UPDATE contact SET firstname = '" + contact.Firstname + "', lastname ='" + contact.Lastname + "', phone_number ='" + contact.Numberphone + "', active = 1 WHERE phone_number ='" + oldnumber + "';";
             }
->>>>>>> 701bbbfa1d10264350bbddd10d53ed7b7fde1c34
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             return true;
